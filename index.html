@@ -4,48 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viral Pack | Transforme seu Conteúdo</title>
+    <title>Pack Viral | Conteúdo Pronto para Postar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --tiktok-pink: #FE2C55;
+            --tiktok-cyan: #25F4EE;
+            --tiktok-black: #010101;
+        }
         body {
             font-family: 'Inter', sans-serif;
+            background-color: var(--tiktok-black);
+            color: white;
             scroll-behavior: smooth;
         }
+        .tiktok-button {
+            background-color: var(--tiktok-pink);
+            box-shadow: 4px 0px 0px var(--tiktok-cyan);
+            transition: all 0.2s ease;
+        }
+        .tiktok-button:hover {
+            transform: scale(1.05);
+            box-shadow: -4px 0px 0px var(--tiktok-cyan);
+        }
         .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .animate-pulse-slow {
-            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        .text-glow-pink {
+            text-shadow: 0 0 15px rgba(254, 44, 85, 0.5);
         }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.9; transform: scale(1.05); }
+        .border-cyan {
+            border-color: var(--tiktok-cyan);
         }
-        .gradient-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
-        @keyframes fade-in-up {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in-up {
-            animation: fade-in-up 0.6s ease-out forwards;
-        }
-        .animate-fade-in {
-            animation: opacity 0.8s ease-out forwards;
-        }
-        @keyframes opacity {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
         }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@19.0.0",
@@ -58,7 +63,7 @@
 }
 </script>
 </head>
-<body class="gradient-bg text-white overflow-x-hidden">
+<body class="overflow-x-hidden">
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
 </body>
