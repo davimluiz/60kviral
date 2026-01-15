@@ -138,7 +138,7 @@ const App: React.FC = () => {
           <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-pink-500 px-10 py-3 rounded-full text-sm font-black uppercase tracking-[0.2em] shadow-2xl animate-bounce">Aproveite Agora</div>
           
           <div className="space-y-2 mb-10">
-            <p className="text-white/20 line-through text-3xl font-black italic uppercase">R$ 197,00</p>
+            <p className="text-white/20 line-through text-3xl font-black italic uppercase">R$ 97,00</p>
             <div className="flex flex-col items-center">
               <span className="text-[10px] font-black uppercase text-cyan tracking-[0.5em] mb-4">Apenas 12 parcelas de</span>
               <div className="flex items-center justify-center space-x-2">
